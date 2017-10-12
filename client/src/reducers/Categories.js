@@ -1,4 +1,4 @@
-import * as Types from '../actions/ActionTypes'
+import * as Types from '../actions/ActionTypes';
 
 function categories(state = [], action) {
 
@@ -12,4 +12,4 @@ function categories(state = [], action) {
   }
 }
 
-export default categories
+export default categories;
