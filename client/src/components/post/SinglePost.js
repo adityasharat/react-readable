@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { formatTimestamp } from '../../utils/Utils'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { formatTimestamp } from '../../utils/Utils';
+import { Link } from 'react-router-dom';
 
-import * as actions from '../../actions/CommentActions'
+import * as actions from '../../actions/CommentActions';
 
 class SinglePost extends Component {
   componentDidMount() {
-    this.props.fetchCommentForPost(this.props.post.id)
+    this.props.fetchCommentForPost(this.props.post.id);
   }
 
   render() {
-    const { post, comments, votePost, fetchAllPosts } = this.props
+    const { post, comments, votePost, fetchAllPosts } = this.props;
 
     return (
       <div className="post card">
@@ -47,7 +47,7 @@ class SinglePost extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
