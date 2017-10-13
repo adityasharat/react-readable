@@ -2,3 +2,30 @@
   margin: 0;
   padding: 0;
 }
+
+.post.card {
+  margin: 0.5rem;
+  padding: 0;
+  max-width: 1000px;
+}
+
+.post.card .card-body {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.post-controls, .post-likes-comments, .post-meta {
+  display: inline-block;
+}
+
+.post-footer-label {
+  margin: 0 0.5rem;
+}
+
+.post-controls {
+  color: #323232;
+}
+
+.post-controls .controls {
+  margin: 0 0.2rem;
+}
