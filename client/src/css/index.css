@@ -45,3 +45,19 @@
 .form h4 {
   margin-left: -0.75rem;
 }
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.small-margin {
+  margin: 0.5em;
+}
+
+.comment.card {
+  margin: 0.5rem;
+  padding: 0;
+  max-width: 1000px;
+}

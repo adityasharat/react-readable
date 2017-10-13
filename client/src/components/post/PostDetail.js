@@ -35,7 +35,7 @@ class PostDetail extends Component {
         <div className="small-margin btn-group">
           <Link className="btn btn-primary" to={ `/${post.category}/${post.id}/comment` }>comment</Link>
           <Link className="btn btn-warning" to={ `/${post.category}/${post.id}/edit` }>
-          <i className="fa fa-edit"/>
+            <i className="fa fa-edit"/>
           </Link>
           <button className="btn btn-danger" onClick={ (e) => this.onPostDelete(e) }>
             <i className="fa fa-trash"/>
