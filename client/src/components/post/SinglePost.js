@@ -57,4 +57,4 @@ function mapStateToProps({ comments }, { post }) {
   }
 }
 
-export default connect(mapStateToProps, actions)(SinglePost)
+export default connect(mapStateToProps, actions)(SinglePost);
