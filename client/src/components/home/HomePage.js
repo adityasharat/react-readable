@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SinglePost from '../post/SinglePost';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions/PostActions';
+import SinglePost from '../post/SinglePost';
 
 class HomePage extends Component {
   static propTypes = {
