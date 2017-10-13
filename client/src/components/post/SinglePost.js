@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import { formatTimestamp } from '../../utils/Utils';
 import { Link } from 'react-router-dom';
 
-import * as actions from '../../actions/CommentActions';
+import * as CommentActions from '../../actions/CommentActions';
+import * as PostActions from '../../actions/PostActions';
 
 class SinglePost extends Component {
   componentDidMount() {
-    this.props.fetchCommentForPost(this.props.post.id);
+    CommentActions.fetchCommentForPost(this.props.post.id);
   }
 
   render() {
@@ -54,7 +55,7 @@ class SinglePost extends Component {
 function mapStateToProps({ comments }, { post }) {
   return {
     comments: comments[post.id]
-  }
+  };
 }
 
-export default connect(mapStateToProps, actions)(SinglePost);
+export default connect(mapStateToProps, PostActions)(SinglePost);

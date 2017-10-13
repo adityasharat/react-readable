@@ -30,7 +30,7 @@ function mapStateToProps({ posts }, { match }) {
   const category = match.params.category;
   return {
     posts: category ? posts.filter(post => post.category === category) : posts
-  }
+  };
 }
 
 export default connect(mapStateToProps, actions)(HomePage);
