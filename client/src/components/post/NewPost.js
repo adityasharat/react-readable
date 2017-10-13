@@ -43,7 +43,7 @@ class NewPost extends Component {
         </div>
         <div className="form-group">
           <label htmlFor="body">Content</label>
-          <input type="text" className="form-control" name="body" id="body" placeholder="Enter contents for the post" required/>
+          <textarea type="text" className="form-control" name="body" id="body" placeholder="Enter contents for the post" rows="10" required/>
         </div>
         <button type="submit" className="btn btn-primary">Create</button>
       </form>
