@@ -36,3 +36,12 @@
 .post-controls .controls {
   margin: 0 0.2rem;
 }
+
+.form.create-post {
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.form h4 {
+  margin-left: -0.75rem;
+}
