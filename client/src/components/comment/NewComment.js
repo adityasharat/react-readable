@@ -28,7 +28,7 @@ class NewComment extends Component {
 
   render() {
     return (
-      <form className="form create-comment" onSubmit={this.handleSubmit}>
+      <form className="form create-comment" onSubmit={ this.handleSubmit }>
         <h4>Create a new post</h4>
         <div className="form-group">
           <label htmlFor="author">Name</label>
