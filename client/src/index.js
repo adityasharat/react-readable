@@ -6,9 +6,8 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 
-import './index.css';
 import reducer from '../src/reducers/index';
-import Index from './components';
+import Application from './components';
 
 const logger = store => next => action => {
   //console.group(action.type);
@@ -27,7 +26,7 @@ const store = createStore(reducer, reduxDevTools)
 const template = (
 <BrowserRouter>
   <Provider store={store}>
-    <h1>Hello World</h1>
+    <Application/>
   </Provider>
 </BrowserRouter>
 );
