@@ -29,6 +29,10 @@
   margin: 0 0.5rem;
 }
 
+.controls {
+  cursor: pointer;
+}
+
 .post-controls {
   color: #323232;
 }
@@ -37,7 +41,7 @@
   margin: 0 0.2rem;
 }
 
-.form.create-post {
+.form.create-post, .form.create-comment {
   margin: 1rem;
   padding: 1.5rem;
 }
