@@ -23,6 +23,8 @@
 
 .post-controls, .post-likes-comments, .post-meta {
   display: inline-block;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .post-footer-label {
@@ -31,6 +33,11 @@
 
 .controls {
   cursor: pointer;
+}
+
+.controls.link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .post-controls {

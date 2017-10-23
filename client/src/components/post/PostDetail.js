@@ -15,13 +15,6 @@ class PostDetail extends Component {
     this.props.fetchCommentForPost(this.props.match.params.postId);
   }
 
-  onPostDelete = () => {
-    const id = this.props.match.params.postId;
-    this.props.deletePost(id, () => {
-      this.props.history.push('/');
-    });
-  }
-
   render() {
     const { post, comments } = this.props;
 
@@ -34,12 +27,6 @@ class PostDetail extends Component {
         <SinglePost post={ post } />
         <div className="small-margin btn-group">
           <Link className="btn btn-primary" to={ `/${post.category}/${post.id}/comment` }>comment</Link>
-          <Link className="btn btn-warning" to={ `/${post.category}/${post.id}/edit` }>
-            <i className="fa fa-edit"/>
-          </Link>
-          <button className="btn btn-danger" onClick={ (e) => this.onPostDelete(e) }>
-            <i className="fa fa-trash"/>
-          </button>
         </div>
         { comments && <PostComment category={ post.category } comments={ comments } history={ this.props.history } /> }
       </div>

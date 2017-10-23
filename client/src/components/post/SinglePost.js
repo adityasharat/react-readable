@@ -7,8 +7,14 @@ import * as CommentActions from '../../actions/CommentActions';
 import * as PostActions from '../../actions/PostActions';
 
 class SinglePost extends Component {
+
   componentDidMount() {
     this.props.fetchCommentForPost(this.props.post.id);
+  }
+
+  onPostDelete = () => {
+    const id = this.props.post.id;
+    this.props.deletePost(id, () => {});
   }
 
   render() {
@@ -36,6 +42,10 @@ class SinglePost extends Component {
                     fetchAllPosts();
                   }
                 }/>
+            <Link className="link controls btn" to={ `/${post.category}/${post.id}/edit` }>
+              <i className="fa fa-edit"/>
+            </Link>
+            <i className="controls fa fa-trash-o" onClick={ (e) => this.onPostDelete(e) }/>
           </div>
           <div className="post-likes-comments">
             <label className="post-footer-label"> { post.voteScore } votes </label>
