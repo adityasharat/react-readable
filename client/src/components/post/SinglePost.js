@@ -8,7 +8,7 @@ import * as PostActions from '../../actions/PostActions';
 
 class SinglePost extends Component {
   componentDidMount() {
-    CommentActions.fetchCommentForPost(this.props.post.id);
+    this.props.fetchCommentForPost(this.props.post.id);
   }
 
   render() {
@@ -58,4 +58,4 @@ function mapStateToProps({ comments }, { post }) {
   };
 }
 
-export default connect(mapStateToProps, PostActions)(SinglePost);
+export default connect(mapStateToProps, { ...PostActions, ...CommentActions })(SinglePost);
