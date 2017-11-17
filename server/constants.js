@@ -20,7 +20,8 @@ String.prototype.format.regex = new RegExp("{-?[0-9]+}", "g");
 const MESSAGES = {
   ERRORS: {
     DEFAULT: 'There was an error.',
-    AUTHORIZATION: 'Please provide an Authorization header to identify yourself (can be whatever you want)'
+    AUTHORIZATION: 'Please provide an Authorization header to identify yourself (can be whatever you want)',
+    TYPE_WITH_ID_NOT_FOUND: '{0} with id {1} not found'
   }
 };
 
