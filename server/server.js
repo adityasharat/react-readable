@@ -132,7 +132,7 @@ app.get('/categories', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -145,7 +145,7 @@ app.get('/:category/posts', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -158,7 +158,7 @@ app.get('/posts', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
           });
@@ -171,7 +171,7 @@ app.post('/posts', bodyParser.json(), (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
           });
@@ -184,7 +184,7 @@ app.get('/posts/:id', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -201,7 +201,7 @@ app.delete('/posts/:id', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -216,7 +216,7 @@ app.post('/posts/:id', bodyParser.json(), (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -229,7 +229,7 @@ app.put('/posts/:id', bodyParser.json(), (req, res) => {
       .then(
         (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -242,7 +242,7 @@ app.get('/posts/:id/comments', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -255,7 +255,7 @@ app.get('/comments/:id', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -268,7 +268,7 @@ app.put('/comments/:id', bodyParser.json(), (req, res) => {
       .then(
         (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -281,7 +281,7 @@ app.post('/comments', bodyParser.json(), (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -295,7 +295,7 @@ app.post('/comments/:id', bodyParser.json(), (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
@@ -308,7 +308,7 @@ app.delete('/comments/:id', (req, res) => {
       .then(
           (data) => res.send(data),
           (error) => {
-              console.error(error)
+              console.error(error);
               res.status(500).send({
                   error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
