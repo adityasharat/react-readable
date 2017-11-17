@@ -7,6 +7,7 @@ const config = require('./config');
 const categories = require('./categories');
 const posts = require('./posts');
 const comments = require('./comments');
+const CONSTANTS = require('./constants');
 
 const app = express();
 
@@ -120,7 +121,7 @@ app.use((req, res, next) => {
     next();
   } else {
     res.status(403).send({
-      error: 'Please provide an Authorization header to identify yourself (can be whatever you want)'
+      error: CONSTANTS.MESSAGES.ERRORS.AUTHORIZATION
     });
   }
 });
@@ -133,7 +134,7 @@ app.get('/categories', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -146,7 +147,7 @@ app.get('/:category/posts', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -159,7 +160,7 @@ app.get('/posts', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                 error: 'There was an error.'
+                 error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
           });
         }
       );
@@ -172,7 +173,7 @@ app.post('/posts', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                 error: 'There was an error.'
+                 error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
           });
         }
       );
@@ -185,7 +186,7 @@ app.get('/posts/:id', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -202,7 +203,7 @@ app.delete('/posts/:id', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -217,7 +218,7 @@ app.post('/posts/:id', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -230,7 +231,7 @@ app.put('/posts/:id', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -243,7 +244,7 @@ app.get('/posts/:id/comments', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -256,7 +257,7 @@ app.get('/comments/:id', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -269,7 +270,7 @@ app.put('/comments/:id', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -282,7 +283,7 @@ app.post('/comments', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -296,7 +297,7 @@ app.post('/comments/:id', bodyParser.json(), (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
@@ -309,7 +310,7 @@ app.delete('/comments/:id', (req, res) => {
           (error) => {
               console.error(error)
               res.status(500).send({
-                  error: 'There was an error.'
+                  error: CONSTANTS.MESSAGES.ERRORS.DEFAULT
               });
           }
       );
